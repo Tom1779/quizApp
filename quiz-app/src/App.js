@@ -24,7 +24,7 @@ function App() {
     // Check if the selected option matches the correct answer for the current question
     if (selectedOption === quizData[index].correctAnswer) {
       // Increase points if the answer is correct
-      setPoints((curPoints) => curPoints + 2);
+      setPoints((curPoints) => curPoints + 1);
     } else {
       alert(`The correct answer was: ${quizData[index].correctAnswer}`);
     }
