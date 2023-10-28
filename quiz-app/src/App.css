@@ -1,0 +1,112 @@
+/* App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.header {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option-label {
+  margin: 10px 0;
+  border: 2px solid #007BFF; /* Add a border around the options */
+  border-radius: 5px; /* Optional: Add rounded corners to the border */
+  padding: 10px;
+}
+
+.option-label input[type="radio"] {
+  display: none;
+}
+
+.option-label label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 35px;
+}
+
+.option-label label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #007BFF;
+  border-radius: 50%;
+}
+
+.option-label label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #007BFF;
+  border-radius: 50%;
+}
+
+/* App.css */
+/* ... (previous styles) ... */
+
+.option-label:hover{
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+.selected-option {
+  background-color: blue;
+  color: white;
+}
+
+.submit-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.points {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.quiz-complete-message {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.score {
+  font-size: 24px;
+  margin: 20px 0;
+}
