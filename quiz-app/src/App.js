@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <h1>Tom's Quiz</h1>
+        <h1>Meter Quiz</h1>
       </div>
 
       {index < quizData.length ? (
@@ -81,6 +81,7 @@ function App() {
           </p>
         </div>
       )}
+      <div>Quiz Created By Tom Arad</div>
     </div>
   );
 }
