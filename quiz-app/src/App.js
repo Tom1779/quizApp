@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 import quizData from "./data/quizData";
+import Button from "@mui/material/Button";
+import CelebrationIcon from "@mui/icons-material/Celebration";
+import Alert from "@mui/material/Alert";
 
 import "./App.css";
 
@@ -8,38 +11,51 @@ function App() {
   const [index, setIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [points, setPoints] = useState(0);
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+  };
+
+  const handleAlertClose = () => {
+    setShowAlert(false);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (selectedOption === null) {
-      alert("please choose an option");
+      alert("Please choose an option");
       return;
     }
 
     // Check if the selected option matches the correct answer for the current question
     if (selectedOption === quizData[index].correctAnswer) {
       // Increase points if the answer is correct
+      setShowAlert(false);
       setPoints((curPoints) => curPoints + 1);
     } else {
-      alert(`The correct answer was: ${quizData[index].correctAnswer}`);
+      setShowAlert(true);
     }
-
-    // Move to the next question or end the quiz
     setIndex((curIndex) => curIndex + 1);
     setSelectedOption(null); // Reset the selected option for the next question
   };
 
   return (
     <div className="App">
+      {showAlert && (
+        <Alert
+          className="alert"
+          variant="filled"
+          severity="error"
+          onClose={handleAlertClose}
+        >
+          The correct answer was: {quizData[index - 1].correctAnswer}
+        </Alert>
+      )}
       <div className="header">
         <h1>Meter Quiz</h1>
       </div>
-
       {index < quizData.length ? (
         <div className="quiz-container">
           <div>
@@ -65,9 +81,22 @@ function App() {
                 </label>
               ))}
             </div>
-            <button type="submit" className="submit-button">
+            <Button
+              varaint="contained"
+              type="submit"
+              className="submit-button"
+              sx={{
+                border: 1,
+                borderColor: "blue",
+                color: "black",
+                "&:hover": {
+                  backgroundColor: "blue",
+                  color: "white",
+                },
+              }}
+            >
               Submit
-            </button>
+            </Button>
           </form>
           <div className="points">
             <h3>Points: {points}</h3>
@@ -75,7 +104,10 @@ function App() {
         </div>
       ) : (
         <div className="quiz-complete-message">
-          <h3>Quiz Complete</h3>
+          <h3>
+            Quiz Complete{" "}
+            <CelebrationIcon style={{ fill: "blue" }}></CelebrationIcon>
+          </h3>
           <p className="score">
             You scored {points} out of {quizData.length} points.
           </p>
@@ -83,7 +115,7 @@ function App() {
       )}
       <div>Quiz Created By Tom Arad</div>
       <div>
-        Backgrund image by{" "}
+        Background image by{" "}
         <a href="https://unsplash.com/@karsten_wuerth?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
           Karsten Würth
         </a>{" "}

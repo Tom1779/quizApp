@@ -21,6 +21,7 @@ body{
   padding: 10px 0;
   border-radius: 5px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .question {
@@ -86,16 +87,6 @@ body{
 .selected-option {
   background-color: blue;
   color: white;
-}
-
-.submit-button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .submit-button:hover {
