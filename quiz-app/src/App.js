@@ -82,6 +82,16 @@ function App() {
         </div>
       )}
       <div>Quiz Created By Tom Arad</div>
+      <div>
+        Backgrund image by{" "}
+        <a href="https://unsplash.com/@karsten_wuerth?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+          Karsten Würth
+        </a>{" "}
+        on{" "}
+        <a href="https://unsplash.com/photos/windmill-on-grass-field-during-golden-hour-0w-uTa0Xz7w?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+          Unsplash
+        </a>
+      </div>
     </div>
   );
 }
