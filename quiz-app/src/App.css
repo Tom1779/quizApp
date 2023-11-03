@@ -90,10 +90,6 @@ body{
   color: white;
 }
 
-.submit-button:hover {
-  background-color: #0056b3;
-}
-
 .points {
   margin: 20px 0;
   font-size: 18px;

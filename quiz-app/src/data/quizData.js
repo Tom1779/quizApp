@@ -36,14 +36,14 @@ const quizData = [
     correctAnswer: "Soil moisture, climate, and plant science",
   },
   {
-    question: "Which industries does Meter Group primarily serve?",
+    question: "What is the name of Meter Group's weather station product?",
     options: [
-      "Agriculture, environmental, and scientific research",
-      "Food and beverage production",
-      "Real estate and construction",
-      "Entertainment and gaming",
+      "WeatherMax",
+      "ZEN Meter",
+      "ZL6",
+      "Entertainment and gamingAquaSense",
     ],
-    correctAnswer: "Agriculture, environmental, and scientific research",
+    correctAnswer: "ZL6",
   },
   {
     question:
@@ -74,14 +74,9 @@ const quizData = [
   },
   {
     question:
-      "METER Group, Inc. provides scientific instruments and sensors for various industries. Which of the following is one of their target sectors?",
-    options: [
-      "Music production",
-      "Agriculture",
-      "Fashion design",
-      "Automotive",
-    ],
-    correctAnswer: "Agriculture",
+      "What is the flagship product of Meter Group for soil measurement?",
+    options: ["AquaCheck", "SoilSentry", "EcoProbe", "Teros"],
+    correctAnswer: "Teros",
   },
   {
     question:

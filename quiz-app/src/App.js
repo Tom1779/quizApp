@@ -41,6 +41,12 @@ function App() {
     setSelectedOption(null); // Reset the selected option for the next question
   };
 
+  const retake = () => {
+    setSelectedOption(null);
+    setIndex(0);
+    setPoints(0);
+  };
+
   return (
     <div className="App">
       {showAlert && (
@@ -84,7 +90,6 @@ function App() {
             <Button
               varaint="contained"
               type="submit"
-              className="submit-button"
               sx={{
                 border: 1,
                 borderColor: "blue",
@@ -111,6 +116,23 @@ function App() {
           <p className="score">
             You scored {points} out of {quizData.length} points.
           </p>
+          <Button
+            varaint="contained"
+            onClick={retake}
+            sx={{
+              border: 1,
+              borderColor: "green",
+              color: "black",
+              "&:hover": {
+                backgroundColor: "green",
+                color: "white",
+              },
+              marginBottom: 3,
+              marginTop: 1,
+            }}
+          >
+            Retake Quiz
+          </Button>
         </div>
       )}
       <div>Quiz Created By Tom Arad</div>
